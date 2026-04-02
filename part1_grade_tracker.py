@@ -26,19 +26,19 @@ for student in raw_students:
     }
     cleaned_students.append(student_data)
 
-    # Requirement 2: Name Validation (checking if words are alphabetic)
+    # Check if words are alphabetic
     is_valid = all(word.isalpha() for word in clean_name.split())
     status = "✓ Valid name" if is_valid else "✕ Invalid name"
     print(f"{clean_name}: {status}")
 
-    # Requirement 3: Print Profile Card
+    # Printing of Profile Cards
     print("-" * 30)
     print(f"Student : {clean_name}")
     print(f"Roll No : {clean_roll}")
     print(f"Marks   : {clean_marks}")
     print("-" * 30)
 
-# Requirement 4: Special case for Roll 103
+# ALL CAPS and lowercase for roll number 103
 for s in cleaned_students:
     if s["roll"] == 103:
         print(f"Roll 103 (Upper): {s['name'].upper()}")
@@ -56,7 +56,6 @@ marks = [88, 72, 95, 60, 78]
 print(f"Analysis for {student_name}:")
 for i in range(len(subjects)):
     m = marks[i]
-    # Simple if-elif logic for grading
     if m >= 90: grade = "A+"
     elif m >= 80: grade = "A"
     elif m >= 70: grade = "B"
@@ -109,7 +108,6 @@ class_data = [
     ("Sneha Pillai", [75, 80, 70, 68, 85])
 ]
 
-# Table Header
 print(f"{'Name':<15} | {'Average':<8} | {'Status'}")
 print("-" * 35)
 
@@ -142,12 +140,12 @@ print("\n" + "="*40 + "\n")
 
 # --- TASK 4: String Manipulation Utility ---
 
-essay = "  python is a versatile language. it supports object oriented, functional, and procedural programming. python is easy to learn.  "
+essay = "  python is a versatile language. it supports object oriented, functional, and procedural programming. python is widely used in data science and machine learning.  "
 
-# 1. Stripping
+# 1. Strip
 clean_essay = essay.strip()
 
-# 2. Title Case
+# 2. Convert to Title Case
 print(f"Title Case: {clean_essay.title()}")
 
 # 3. Count 'python'
@@ -155,11 +153,10 @@ py_count = clean_essay.lower().count("python")
 print(f"Occurrences of 'python': {py_count}")
 
 # 4. Replace python with emoji
-# Note: we use replace on the lowercase version because step 1 made it lowercase-ish
 modified_essay = clean_essay.replace("python", "Python 🐍")
 print(f"Modified Essay: {modified_essay}")
 
-# 5. & 6. Split into sentences and print numbered
+# 5. Split using a period, followed by a space
 sentences = clean_essay.split(". ")
 print("\nNumbered Sentences:")
 for i, sentence in enumerate(sentences, 1):
