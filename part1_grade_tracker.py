@@ -8,6 +8,7 @@ raw_students = [
     {"name": " Sneha pillai ",    "roll": "105", "marks_str": "75, 80, 70, 68, 85"},
 ]
 
+cleaned_students = [ ]
 for student in raw_students:
     # 1. Cleaning
     clean_name = student["name"].strip().title()
