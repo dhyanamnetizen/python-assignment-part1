@@ -1,47 +1,8 @@
 # Part 1 - Python Basics and Control Flow
-Python Environment Setup:
 
+An Overview of the Repo :
 
-
-Windows: Machine
-
-## Add new Python environment
-python -m venv venv
-
-# Optional resolve PowerShell execution policy restriction
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-## Activate Python environment before starting work
-venv\Scripts\activate
-
-## Install required packages
-pip install -r requirements.txt
-## Deactivate Python environment
-deactivate
-## Delete or remove Python env
-rmdir /s /q venv
-
-
-
-Mac or Linux:
-
-
-
-## Add new Python environment
-python3 -m venv ./venv
-
-## Activate Python environment before starting work
-
-source ./venv/bin/activate
-
-## Check if environment is successfully activated or not
-which python3
-
-## Install required packages
-pip3 install -r requirements.txt
-
-## Deactivate Python environment
-deactivate
-
-## Delete or remove Python env 
-rm -rf ./venv
+1. Data Cleaning : Formatting the cases and whitespace of raw records.
+2. Grade Analysis : Calculating marks and assigning grades. Also, adding subjects and the respective marks of the subject.
+3. Performance Summary : Creating a summary of class students report, mentioning pass/fail status of each student.
+4. Text Formatting : Formatting the style of the etxt and adding numeration to it.
